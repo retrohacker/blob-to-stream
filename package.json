@@ -1,22 +1,26 @@
 {
-  "name": "blob-to-buffer",
-  "description": "Convert a Blob to a Buffer",
-  "version": "1.2.6",
-  "author": "Feross Aboukhadijeh <feross@feross.org> (http://feross.org/)",
+  "name": "blob-to-stream",
+  "description": "Convert a Blob to a Stream",
+  "version": "1.0.0",
+  "author": "William Blankenship <william.jblankenship@gmail.com> (http://will.blankenship.io/)",
   "bugs": {
-    "url": "https://github.com/feross/blob-to-buffer/issues"
+    "url": "https://github.com/retrohacker/blob-to-stream/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "blob-to-buffer": "^1.2.6"
+  },
   "devDependencies": {
+    "browserify": "^14.1.0",
     "standard": "*",
     "tape": "^4.0.0",
+    "testling": "^1.7.1",
     "zuul": "^3.8.0"
   },
-  "homepage": "https://github.com/feross/blob-to-buffer",
+  "homepage": "https://github.com/retrohacker/blob-to-stream",
   "keywords": [
     "convert",
     "blob",
-    "buffer",
+    "stream",
     "browserify",
     "filereader"
   ],
@@ -24,11 +28,11 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/feross/blob-to-buffer.git"
+    "url": "git://github.com/retrohacker/blob-to-stream.git"
   },
   "scripts": {
-    "test": "standard && npm run test-browser",
+    "test": "standard && dependency-check --unused --missing --no-dev ./package.json && npm run test-browser",
     "test-browser": "zuul -- test/*.js",
-    "test-browser-local": "zuul --local -- test/*.js"
+    "test-browser-local": "browserify test/*.js | testling"
   }
 }

@@ -1,24 +1,30 @@
 /* global Blob */
 
-var toBuffer = require('../')
+var toStream = require('../')
 var test = require('tape')
 
-var blob = new Blob([ new Uint8Array([1, 2, 3]) ], { type: 'application/octet-binary' })
+var array = []
+var elements = 10
+for (var i = 0; i < elements; i++) array.push(i)
+var blob = new Blob([ new Uint8Array(array) ], { type: 'application/octet-binary' })
+var expected = Buffer.from(array)
 
 test('Basic tests', function (t) {
-  toBuffer(blob, function (err, buffer) {
-    if (err) throw err
-    t.deepEqual(buffer, Buffer.from([1, 2, 3]))
-    t.end()
+  t.plan(array.length)
+
+  var rs = toStream(blob)
+  var index = 0
+
+  rs.on('data', function (d) {
+    for (var i = 0; i < d.length; i++) {
+      t.equal(d[i], expected[index++], `${index} correct`)
+    }
   })
 })
 
 test('Callback error on invalid arguments', function (t) {
   t.throws(function () {
-    toBuffer({ blah: 1 }, function () {})
-  })
-  t.throws(function () {
-    toBuffer(blob)
+    toStream({ blah: 1 }, function () {})
   })
   t.end()
 })

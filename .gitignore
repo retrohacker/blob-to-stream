@@ -1,0 +1,3 @@
+.zuulrc
+*.swp
+node_modules/
