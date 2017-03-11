@@ -2,7 +2,6 @@ var blobToBuffer = require('blob-to-buffer')
 var stream = require('stream')
 
 module.exports = function blobToStream (blob) {
-  console.log(blob)
   var rs = new stream.Readable()
   rs._read = function () {}
 
