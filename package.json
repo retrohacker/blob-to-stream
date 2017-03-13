@@ -1,7 +1,7 @@
 {
   "name": "blob-to-stream",
   "description": "Convert a Blob to a Stream",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "William Blankenship <william.jblankenship@gmail.com> (http://will.blankenship.io/)",
   "bugs": {
     "url": "https://github.com/retrohacker/blob-to-stream/issues"
