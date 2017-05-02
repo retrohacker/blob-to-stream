@@ -1,5 +1,7 @@
 # blob-to-stream [![Build Status][travis-image]][travis-url] [![NPM Version][npm-image]][npm-url] [![NPM Downloads][downloads-image]][downloads-url]
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/retrohacker/blob-to-stream.svg)](https://greenkeeper.io/)
+
 #### Convert a Blob to a [Stream](https://github.com/substack/stream-browserify).
 
 
