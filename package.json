@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "browserify": "^14.1.0",
-    "dependency-check": "^2.8.0",
+    "dependency-check": "^2.9.2",
     "standard": "*",
     "tape": "^4.0.0",
     "testling": "^1.7.1",
