@@ -15,7 +15,7 @@
     "standard": "*",
     "tape": "^4.0.0",
     "testling": "^1.7.1",
-    "zuul": "^3.8.0"
+    "zuul": "3.11.1"
   },
   "homepage": "https://github.com/retrohacker/blob-to-stream",
   "keywords": [
