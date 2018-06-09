@@ -7,7 +7,7 @@
     "url": "https://github.com/retrohacker/blob-to-stream/issues"
   },
   "dependencies": {
-    "blob-to-buffer": "^1.2.6"
+    "blob-to-buffer": "^1.2.8"
   },
   "devDependencies": {
     "browserify": "^14.1.0",
