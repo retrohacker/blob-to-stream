@@ -14,7 +14,7 @@
     "dependency-check": "^2.8.0",
     "standard": "*",
     "tape": "^4.0.0",
-    "testling": "^1.7.1",
+    "testling": "^1.7.2",
     "zuul": "^3.8.0"
   },
   "homepage": "https://github.com/retrohacker/blob-to-stream",
