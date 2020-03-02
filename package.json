@@ -13,7 +13,7 @@
     "browserify": "^14.1.0",
     "dependency-check": "^2.8.0",
     "standard": "*",
-    "tape": "^4.0.0",
+    "tape": "^4.13.2",
     "testling": "^1.7.1",
     "zuul": "^3.8.0"
   },
